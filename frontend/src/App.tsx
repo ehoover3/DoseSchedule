@@ -146,7 +146,6 @@ function App() {
               </Grid>
             </Grid>
           </FormControl>
-          {/* <TESTING formData={formData} variables={variables} /> */}
         </Container>
         <footer style={{ textAlign: "center" }}>&copy; 2023 Eric Hoover. All Rights Reserved.</footer>
       </Box>

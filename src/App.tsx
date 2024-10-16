@@ -12,7 +12,6 @@ import TextInput from "./components/Inputs/TextInput";
 import DateInput from "./components/Inputs/DateInput";
 import Disclaimer from "./components/Disclaimer";
 import NumberInput from "./components/Inputs/NumberInput";
-import TESTING from "./components/TESTING";
 
 // MUI
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -106,15 +105,7 @@ function App() {
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <Navbar />
-      <ConfirmationBox
-        openConfirmationBox={openConfirmationBox}
-        setOpenConfirmationBox={setOpenConfirmationBox}
-        variables={variables}
-        formData={formData}
-        setFormData={setFormData}
-        currentDate={currentDate}
-        setTimer={setTimer}
-      />
+      <ConfirmationBox openConfirmationBox={openConfirmationBox} setOpenConfirmationBox={setOpenConfirmationBox} variables={variables} formData={formData} setFormData={setFormData} currentDate={currentDate} setTimer={setTimer} />
 
       <Box sx={{ height: "100vh", bgcolor: "#f7f7f7", pt: 8, pb: 6 }}>
         <Container maxWidth='sm'>
@@ -126,10 +117,7 @@ function App() {
               </Grid>
 
               <Grid item xs={12}>
-                <NumberInput
-                  residualRenalFunction={formData.residualRenalFunction}
-                  setResidualRenalFunction={(value: any) => setFormData({ ...formData, residualRenalFunction: value })}
-                />
+                <NumberInput residualRenalFunction={formData.residualRenalFunction} setResidualRenalFunction={(value: any) => setFormData({ ...formData, residualRenalFunction: value })} />
               </Grid>
 
               <Grid item xs={12}>
@@ -137,21 +125,14 @@ function App() {
               </Grid>
 
               <Grid item xs={12}>
-                <TextInput
-                  state={formData.createdBy}
-                  setState={(value: any) => setFormData({ ...formData, createdBy: value })}
-                  label={"Enter Your Name (Employee Submitting This Form)"}
-                />
+                <TextInput state={formData.createdBy} setState={(value: any) => setFormData({ ...formData, createdBy: value })} label={"Enter Your Name (Employee Submitting This Form)"} />
               </Grid>
               <Grid item xs={12}>
                 <Disclaimer />
               </Grid>
 
               <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox checked={formData.checkboxChecked} onChange={handleCheckboxChange} />}
-                  label="I have read and agree to this website's disclaimer and terms of use."
-                />
+                <FormControlLabel control={<Checkbox checked={formData.checkboxChecked} onChange={handleCheckboxChange} />} label="I have read and agree to this website's disclaimer and terms of use." />
               </Grid>
 
               <Grid item xs={12}>
@@ -165,7 +146,6 @@ function App() {
               </Grid>
             </Grid>
           </FormControl>
-          {/* <TESTING formData={formData} variables={variables} /> */}
         </Container>
         <footer style={{ textAlign: "center" }}>&copy; 2023 Eric Hoover. All Rights Reserved.</footer>
       </Box>
